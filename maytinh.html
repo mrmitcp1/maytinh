@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  button {
+      width: 100%;
+  }
+</style>
+<body>
+<input type="text" id="number">
+<br>
+<br>
+<table>
+    <tr>
+    <td> <button value="1" onclick="num(this.value)">1</button></td>
+    <td> <button value="2" onclick="num(this.value)">2</button></td>
+    <td> <button value="3" onclick="num(this.value)">3</button></td>
+    <td> <button value="+" onclick="num(this.value)">+</button></td>
+    </tr>
+    <tr>
+        <td><button value="4" onclick="num(this.value)">4</button></td>
+        <td><button value="5" onclick="num(this.value)">5</button></td>
+        <td><button value="6" onclick="num(this.value)">6</button></td>
+        <td><button value="-" onclick="num(this.value)">-</button></td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="num(this.value)">7</button></td>
+        <td><button value="8" onclick="num(this.value)">8</button></td>
+        <td><button value="9" onclick="num(this.value)">9</button></td>
+        <td><button value="*" onclick="num(this.value)">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="rs()">AC</button></td>
+        <td><button value="0" onclick="num(this.value)">0</button></td>
+        <td><button onclick="result()" >=</button></td>
+        <td><button value="/" onclick="num(this.value)">/</button></td>
+    </tr>
+
+</table>
+<script>
+    let number = document.getElementById('number')
+    function num(value){
+        number.value += value;
+    }
+    function result(){
+        let result = eval(number.value);
+        number.value = result
+    }
+    function rs() {
+        number.value=''
+
+    }
+</script>
+</body>
+</html>
